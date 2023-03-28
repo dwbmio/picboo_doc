@@ -1,4 +1,4 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://picboo.ink"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
