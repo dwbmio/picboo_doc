@@ -29,5 +29,4 @@ features: [
     },
     
 ]
-companyname: "test here"
 ---
