@@ -1,4 +1,4 @@
-baseurl = "https://zealous-moss-02526c900.2.azurestaticapps.net"
+baseurl = "https://picboo.icu"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
