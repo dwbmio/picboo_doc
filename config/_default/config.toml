@@ -1,4 +1,4 @@
-baseurl = "https://picboo.icu"
+baseurl = "https://picboo.ink"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
