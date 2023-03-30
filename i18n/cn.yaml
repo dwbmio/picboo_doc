@@ -3,3 +3,12 @@
 
 - id: get-started
   translation: "使用文档"
+
+- id: goto-download
+  translation: "下载"
+
+- id: index-export-title
+  translation: 导出使用你理想的引擎
+
+- id: index-export-titlehelp
+  translation: 支持几乎绘本展示的平台,使用流行的渲染引擎横跨包括移动端IOS+Android、桌面端。

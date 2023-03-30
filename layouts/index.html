@@ -1,34 +1,60 @@
 {{ define "main" }}
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
+    <div class="col">
       <h1 class="mt-0">{{ .Title }}</h1>
+      <p class="fw-semibold">{{ .Params.lead | safeHTML }}</p>
+      <a class="btn btn-primary btn-lg px-4 mb-2"
+        href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/"
+        role="button">{{ i18n "get-started" }}</a>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="" role="button">{{ i18n "goto-download" }}</a>
+      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON
+          "/package.json" }}{{ $data.version }}</a></p>
     </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+    <div class="col col-xl-8 text-center">
+      <img src="images/vendor/doks.png"></img>
     </div>
   </div>
 </section>
 {{ end }}
 
-{{ define "sidebar-prefooter" }}
-  <section class="section section-sm">
-    <div class="container">
 
-      {{ if .Params.features}} 
-      <div class="row justify-content-center text-center">
-        {{range $index, $val :=.Params.features}}
-            <div class="col-lg-5">
-              <h2 class="h4">{{$val.title}}</h2>
-              <p>{{$val.desc}}</p>
-            </div>
-        {{end}}
+{{ define "sidebar-prefooter" }}
+<section class="section section-sm">
+  <div class="container">
+    {{ if .Params.features}}
+    <div class="row justify-content-center text-center">
+      {{range $index, $val :=.Params.features}}
+      <div class="col-lg-5">
+        <h2 class="h4">{{$val.title}}</h2>
+        <p>{{$val.desc}}</p>
+      </div>
+      {{end}}
       {{end}}
     </div>
+  </div>
+</section>
+<section class="section container-fluid mt-n3 pb-3">
+  <section class="section container-fluid mt-n3 pb-3">
+    <div class="row justify-content-center">
+      <div class="col col-xl-8 text-center">
+        <h4 class="fw-normal">{{ i18n "index-export-title" }}</h4>
+        <p class="fw-normal">{{ i18n "index-export-titlehelp" }}</p>
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          {{ range $index, $val :=.Params.engines }}
+          <li class="nav-item {{if eq $index 1}}active{{end}}" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+              type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">{{$val}}</button>
+          </li>
+          {{end}}
+        </ul>
+        <div class="mt-1">
+          <img src="images/vendor/doks.png"></img>
+        </div>
+      </div>
     </div>
   </section>
+</section>
 {{ end }}
 
 {{ define "sidebar-footer" }}
