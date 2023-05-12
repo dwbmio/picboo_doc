@@ -3,8 +3,8 @@
 ## Homepage
 title = "Picboo"
 titleSeparator = "-"
-titleAddition = "Picture book make by AI"
-description = "Picture book make by AI."
+titleAddition = "aigc;create book by ai;chatgpt build comic;"
+description = "aigc book maker;aigc;aigi comic"
 
 ## Documentation
 # docsVersion = "0.3"
@@ -12,7 +12,7 @@ description = "Picture book make by AI."
 ## Open Graph
 images = ["doks.png"]
 ogLocale = "zh-CN"
-domainTLD = "doks.netlify.app"
+domainTLD = "picboo.ink"
 titleHome = "Doks Theme"
 
 ## Twitter Cards
